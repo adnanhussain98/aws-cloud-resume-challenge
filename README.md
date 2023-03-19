@@ -8,7 +8,8 @@ I've created an S3 Bucket with static website hosting enabled to to store my web
 
 ## 2. CloudFront
 
-I have created a distruibtion within CloudFront to serve my website globally. Currently, I'm using the CloudFront URL to access my website but I will be changing this to use my own domain using Route53. Once the distruibution was created, a bucket policy for S3 was generated which I've copied into my S3 bucket. This will allow CloudFront to access the S3 objects for my website.
+I have created a distruibtion within CloudFront to serve my website globally. Once the distruibution was created, a bucket policy for S3 was generated which I've copied into my S3 bucket. This will allow CloudFront to access the S3 objects for my website. Currently, I'm using the CloudFront URL to access my website but I will be changing this to use my own domain using Route53. See steps 3 & 4.
+Update: Now that the certificates have been issued to me in AWS Certificate Manager, I can edit the CloudFront distribution 
 
 ## 3. Route 53
 
@@ -22,7 +23,8 @@ I have bought my domain from 123 Reg so in my case, I just need to log into my 1
 I have requested a public certificate for the following domains I own:   
 adnanhussain.co.uk      
 *.adnanhussain.co.uk (the wildcard * is used to allow all the subdomains)    
-This will generate some SSL certificates which I will be using in my CloudFront distribution.
+This will generate some SSL certificates which I will be using in my CloudFront distribution.    
+Update: As all my resources are in the London region (eu-west-2), I originally requested a certificate in that region but AWS requires you have your certificates in N. Virginia (us-east-1) if you want to attach it to your CloudFront distribution. You won't be able to export the exisiting certificate but you will be fine to request a certificate for the same domain name.
 
 ## 5. DynamoDB
 
