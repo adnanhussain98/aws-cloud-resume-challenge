@@ -16,6 +16,7 @@ Update: Now that the certificates have been issued to me in AWS Certificate Mana
 I have created a public hosted zone for my domain, adnanhussain.co.uk. This will generate some nameservers which I can use to point my domain name to.
 
 ![Screenshot 2023-03-19 at 5 38 59 pm](https://user-images.githubusercontent.com/24739598/226206090-6bac13a5-9ac5-4987-aea7-063d48df3157.jpg)
+
 I have bought my domain from 123 Reg so in my case, I just need to log into my 123 Reg account and find the Nameserver management section. As you can see in the screenshot, I have copied in the 4 nameservers given to me by Route53.    
 
 ![Screenshot 2023-03-19 at 5 42 59 pm](https://user-images.githubusercontent.com/24739598/226206319-3ab21b5b-cfbd-41e4-9e14-ce09f7d1b9e0.jpg)
