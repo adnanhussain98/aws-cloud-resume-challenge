@@ -1,5 +1,6 @@
 # AWS Cloud Resume Challenge
 Cool way to show off my CV/Resume online utilising multiple AWS services and Terraform.
+Check out the official cloud resume challenge website for more context: https://cloudresumechallenge.dev/docs/the-challenge/aws/
 
 ## DynamoDB
 
