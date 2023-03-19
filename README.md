@@ -13,8 +13,13 @@ I've created an S3 Bucket with static website hosting enabled to to store my web
 
 ## 3. CloudFront
 
-I have created a distruibtion within CloudFront to serve my website globally. Once the distruibution was created, a bucket policy for S3 was generated which I've copied into my S3 bucket. This will allow CloudFront to access the S3 objects for my website. Currently, I'm using the CloudFront URL to access my website but I will be changing this to use my own domain using Route53. See steps 3 & 4.
-Update: Now that the certificates have been issued to me in AWS Certificate Manager, I can edit the CloudFront distribution 
+I have created a distruibtion within CloudFront to serve my website globally. Once the distruibution was created, a bucket policy for S3 was generated which I've copied into my S3 bucket. This will allow CloudFront to access the S3 objects for my website.   
+Currently, I'm using the CloudFront URL to access my website but I will be changing this to use my own domain using Route53. See steps 3 & 4.
+
+Update: Now that the certificates have been issued to me in AWS Certificate Manager, I can edit the CloudFront distribution and add in my domain name and SSL certificate
+
+![Screenshot 2023-03-19 at 9 59 46 pm](https://user-images.githubusercontent.com/24739598/226212396-5b57dd81-709f-4219-bfcf-693e46dca11f.jpg)
+
 
 ## 4. Route 53
 
