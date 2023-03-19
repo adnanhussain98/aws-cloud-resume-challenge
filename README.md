@@ -33,5 +33,9 @@ Update: As all my resources are in the London region (eu-west-2), I originally r
 
 ## 5. DynamoDB
 
-As part of the AWS Cloud Resume Challenge, one of the requirements is to use IaC (Infrastructure as Code). We can use AWS' CloudFormation service but I have opted to use Terraform. It works well and the documentation is easy to follow. 
+As part of the AWS Cloud Resume Challenge, one of the requirements is to use IaC (Infrastructure as Code). We can use AWS' CloudFormation service but I have opted to use Terraform. It works well and the documentation is easy to follow.
+
 In this repo, you will see a folder named "dynamodb". This consists of Terraform code used to create a DynamoDB table and add an item into it. This setup is required as I will be creating a Lambda which will be updating the DynamoDB item each time a vistor views my website.
+
+![tf-image](https://user-images.githubusercontent.com/24739598/226211115-26584f51-7edc-49d5-9d0d-84403420e6e4.png)
+
