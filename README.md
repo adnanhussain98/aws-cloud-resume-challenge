@@ -18,6 +18,7 @@ WIP
 
 WIP
 
-## DynamoDB
+## 5. DynamoDB
 
-The folder "dynamodb" consists of the Terraform code used to create a DynamoDB table and add an item into it. This setup is required as I will be creating a Lambda which will be updating the DynamoDB item each time a vistor views my website
+As part of the AWS Cloud Resume Challenge, one of the requirements for this is to use IaC (Infrastructure as Code). We can use AWS' CloudFormation service but I have opted to use Terraform. It works well and the documentation is easy to follow. 
+In this repo, you will see a folder named "dynamodb". This consists of Terraform code used to create a DynamoDB table and add an item into it. This setup is required as I will be creating a Lambda which will be updating the DynamoDB item each time a vistor views my website.
