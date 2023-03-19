@@ -36,5 +36,5 @@ Update: As all my resources are in the London region (eu-west-2), I originally r
 As part of the AWS Cloud Resume Challenge, one of the requirements is to use IaC (Infrastructure as Code). We can use AWS' CloudFormation service but I have opted to use Terraform. It works well and the documentation is easy to follow.
 
 In this repo, you will see a folder named "dynamodb". This consists of Terraform code used to create a DynamoDB table and add an item into it. This setup is required as I will be creating a Lambda which will be updating the DynamoDB item each time a vistor views my website.
-![tf-image](https://user-images.githubusercontent.com/24739598/226211178-70d2ab24-6077-4b3b-8072-82dc15c8e446.png)
+![tf-image](https://user-images.githubusercontent.com/24739598/226211233-45197937-d5cd-4ce1-8af4-c752b0b4ed42.png)
 
