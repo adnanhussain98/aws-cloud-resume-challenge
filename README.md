@@ -1,17 +1,22 @@
 # AWS Cloud Resume Challenge
-Cool way to show off my CV/Resume online utilising multiple AWS services and Terraform.
+At face value, the website doesn't seem like much other than an online CV/Resume. The interesting bit is what's happening in the background and how I've utilised various cloud technologies to serve my website globally. It might be a bit overkill for a simple online CV/Resume but the same principals can be applied to other projects. Feel free to take a look at my own interpretation on the cloud resume challenege.
+
 Check out the official cloud resume challenge website for more context: https://cloudresumechallenge.dev/docs/the-challenge/aws/
 
-## 1. S3
+## 1. HTML & CSS
+
+I have used a website template which consists of HTML & CSS. I've opted to do this rather than creating a website from scratch as the main aim of this project for me is to gain some solid experience using AWS and related DevOps tooling.
+
+## 2. S3
 
 I've created an S3 Bucket with static website hosting enabled to to store my website files. Public access to it is blocked and I will be allowing resources such as CloudFront to access it via bucket policies. For now, I've uploaded a simple HTML website file named "index.html". I've also specified this as the name for the Index document.
 
-## 2. CloudFront
+## 3. CloudFront
 
 I have created a distruibtion within CloudFront to serve my website globally. Once the distruibution was created, a bucket policy for S3 was generated which I've copied into my S3 bucket. This will allow CloudFront to access the S3 objects for my website. Currently, I'm using the CloudFront URL to access my website but I will be changing this to use my own domain using Route53. See steps 3 & 4.
 Update: Now that the certificates have been issued to me in AWS Certificate Manager, I can edit the CloudFront distribution 
 
-## 3. Route 53
+## 4. Route 53
 
 I have created a public hosted zone for my domain, adnanhussain.co.uk. This will generate some nameservers which I can use to point my domain name to.
 
@@ -22,7 +27,7 @@ I have bought my domain from 123 Reg so in my case, I just need to log into my 1
 ![Screenshot 2023-03-19 at 5 42 59 pm](https://user-images.githubusercontent.com/24739598/226206319-3ab21b5b-cfbd-41e4-9e14-ce09f7d1b9e0.jpg)
 
 
-## 4. AWS Certificate Manager
+## 5. AWS Certificate Manager
 
 I have requested a public certificate for the following domains I own:   
 - adnanhussain.co.uk      
@@ -31,7 +36,7 @@ I have requested a public certificate for the following domains I own:
 This will generate some SSL certificates which I will be using in my CloudFront distribution.    
 Update: As all my resources are in the London region (eu-west-2), I originally requested a certificate in that region but AWS requires you to have your certificates in N. Virginia (us-east-1) if you want to attach it to your CloudFront distribution. You won't be able to export the exisiting certificate but you will be fine to request a certificate in us-east-1 for the same domain name.
 
-## 5. DynamoDB
+## 6. DynamoDB
 
 As part of the AWS Cloud Resume Challenge, one of the requirements is to use IaC (Infrastructure as Code). We can use AWS' CloudFormation service but I have opted to use Terraform. It works well and the documentation is easy to follow.
 
