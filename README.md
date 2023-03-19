@@ -21,8 +21,8 @@ I have bought my domain from 123 Reg so in my case, I just need to log into my 1
 ## 4. AWS Certificate Manager
 
 I have requested a public certificate for the following domains I own:   
-adnanhussain.co.uk      
-*.adnanhussain.co.uk (the wildcard * is used to allow all the subdomains)    
+- adnanhussain.co.uk      
+- *.adnanhussain.co.uk (the wildcard * is used to allow all the subdomains)    
 This will generate some SSL certificates which I will be using in my CloudFront distribution.    
 Update: As all my resources are in the London region (eu-west-2), I originally requested a certificate in that region but AWS requires you to have your certificates in N. Virginia (us-east-1) if you want to attach it to your CloudFront distribution. You won't be able to export the exisiting certificate but you will be fine to request a certificate in us-east-1 for the same domain name.
 
