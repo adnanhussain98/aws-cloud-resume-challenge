@@ -12,11 +12,14 @@ I have created a distruibtion within CloudFront to serve my website globally. Cu
 
 ## 3. Route 53
 
-WIP
+I have created a public hosted zone for my domain, adnanhussain.co.uk. This will generate some nameservers ![Screenshot 2023-03-19 at 5 38 59 pm](https://user-images.githubusercontent.com/24739598/226206090-6bac13a5-9ac5-4987-aea7-063d48df3157.jpg)
+
 
 ## 4. AWS Certificate Manager
 
-WIP
+I have requeted a public certificate for the following domains I own:
+adnanhussain.co.uk
+*.adnanhussain.co.uk (the wildcard * is used to allow all the subdomains)
 
 ## 5. DynamoDB
 
