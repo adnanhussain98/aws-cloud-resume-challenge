@@ -21,7 +21,8 @@ I have bought my domain from 123 Reg so in my case, I just need to log into my 1
 
 I have requested a public certificate for the following domains I own:   
 adnanhussain.co.uk      
-*.adnanhussain.co.uk (the wildcard * is used to allow all the subdomains)
+*.adnanhussain.co.uk (the wildcard * is used to allow all the subdomains)    
+This will generate some SSL certificates which I will be using in my CloudFront distribution
 
 ## 5. DynamoDB
 
