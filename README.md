@@ -31,6 +31,9 @@ I have bought my domain from 123 Reg so in my case, I just need to log into my 1
 
 ![Screenshot 2023-03-19 at 5 42 59 pm](https://user-images.githubusercontent.com/24739598/226206319-3ab21b5b-cfbd-41e4-9e14-ce09f7d1b9e0.jpg)
 
+Update: Now that I've updated my CloudFront distribution with my domain name and SSL certificate, I have created a record within the hosted zone I created earlier so that my domain, adnanhussain.co.uk, points to the CloudFront distribution. The record will look something like this:
+
+![image](https://user-images.githubusercontent.com/24739598/226212677-b2a1a09c-55e8-4748-aa1a-34ffe67bb1e5.png)
 
 ## 5. AWS Certificate Manager
 
