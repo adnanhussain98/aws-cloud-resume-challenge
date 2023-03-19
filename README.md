@@ -19,7 +19,7 @@ I have bought my domain from 123 Reg so in my case, I just need to log into my 1
 
 ## 4. AWS Certificate Manager
 
-I have requeted a public certificate for the following domains I own:   
+I have requested a public certificate for the following domains I own:   
 adnanhussain.co.uk      
 *.adnanhussain.co.uk (the wildcard * is used to allow all the subdomains)
 
