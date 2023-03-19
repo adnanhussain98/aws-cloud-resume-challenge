@@ -37,5 +37,5 @@ As part of the AWS Cloud Resume Challenge, one of the requirements is to use IaC
 
 In this repo, you will see a folder named "dynamodb". This consists of Terraform code used to create a DynamoDB table and add an item into it. This setup is required as I will be creating a Lambda which will be updating the DynamoDB item each time a vistor views my website.
 
-![tf-image](https://user-images.githubusercontent.com/24739598/226211115-26584f51-7edc-49d5-9d0d-84403420e6e4.png)
+![tf-image](https://user-images.githubusercontent.com/24739598/226211178-70d2ab24-6077-4b3b-8072-82dc15c8e446.png)
 
