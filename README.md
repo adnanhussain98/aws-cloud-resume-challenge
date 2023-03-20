@@ -1,6 +1,6 @@
 # AWS Cloud Resume Challenge
 
-[Click here](adnanhussain.co.uk) to access my website.
+[Click here](https://adnanhussain.co.uk) to access my website.
 
 At face value, the website doesn't seem like much other than an online CV/Resume. The interesting bit is what's happening in the background and how I've utilised various cloud technologies to serve my website globally. It might be a bit overkill for a simple online CV/Resume but the same principals can be applied to other projects. Feel free to take a look at my own interpretation on the cloud resume challenge.
 
