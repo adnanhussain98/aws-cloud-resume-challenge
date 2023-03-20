@@ -73,6 +73,5 @@ I am using AWS CodeCommit and CodePipeline for CI/CD. I have created a repositor
 
 Once that was done, I cloned the repo to my local machine as instructed in the AWS console. As you can see in the screenshot below, I cloned an empty repo and then proceeded to add my website files into that folder. I then added them into git, commit with a message and then pushed the changes successfully.
 
-![image](https://user-images.githubusercontent.com/24739598/226233442-a01aba94-8f40-49ca-8255-3ba41234a22d.png)
-
+![image](https://user-images.githubusercontent.com/24739598/226234080-3ee5198e-8920-40a8-9552-f20165626885.png)
 
