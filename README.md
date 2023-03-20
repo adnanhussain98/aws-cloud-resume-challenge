@@ -1,3 +1,5 @@
+Readme
+
 # AWS Cloud Resume Challenge
 
 [Click here](https://adnanhussain.co.uk) to access my website.
@@ -16,14 +18,14 @@ I've created an S3 Bucket with static website hosting enabled to to store my web
 
 ## 3. CloudFront
 
-I have created a distruibtion within CloudFront to serve my website globally. Once the distruibution was created, a bucket policy for S3 was generated which I've copied into my S3 bucket. This will allow CloudFront to access the S3 objects for my website.   
+I have created a distribution within CloudFront to serve my website globally. Once the distribution was created, a bucket policy for S3 was generated which I've copied into my S3 bucket. This will allow CloudFront to access the S3 objects for my website.   
 Currently, I'm using the CloudFront URL to access my website but I will be changing this to use my own domain using Route53. See steps 3 & 4.
 
 Update: Now that the certificates have been issued to me in AWS Certificate Manager, I can edit the CloudFront distribution and add in my domain name and SSL certificate
 
 ![Screenshot 2023-03-19 at 9 59 46 pm](https://user-images.githubusercontent.com/24739598/226212396-5b57dd81-709f-4219-bfcf-693e46dca11f.jpg)
 
-Update 2: For now, any changes made to my website will require me to create an invalidation in CloudFront so that the cached version of my website files in various edge locations are updated. Is is NOT reccomneded to replace the updated files with the same name. Instead, it's best to use versioned file names such as index-v2.html. I will be addressing this later when I set up CI/CD piplines for changes to my website files.
+Update 2: For now, any changes made to my website will require me to create an invalidation in CloudFront so that the cached version of my website files in various edge locations are updated. Is is NOT recommended to replace the updated files with the same name. Instead, it's best to use versioned file names such as index-v2.html. I will be addressing this later when I set up CI/CD pipelines for changes to my website files.
 
 
 ## 4. Route 53
@@ -47,13 +49,13 @@ I have requested a public certificate for the following domains I own:
 - *.adnanhussain.co.uk (the wildcard * is used to allow all the subdomains)    
 
 This will generate some SSL certificates which I will be using in my CloudFront distribution.    
-Update: As all my resources are in the London region (eu-west-2), I originally requested a certificate in that region but AWS requires you to have your certificates in N. Virginia (us-east-1) if you want to attach it to your CloudFront distribution. You won't be able to export the exisiting certificate but you will be fine to request a certificate in us-east-1 for the same domain name.
+Update: As all my resources are in the London region (eu-west-2), I originally requested a certificate in that region but AWS requires you to have your certificates in N. Virginia (us-east-1) if you want to attach it to your CloudFront distribution. You won't be able to export the existing certificate but you will be fine to request a certificate in us-east-1 for the same domain name.
 
 ## 6. DynamoDB
 
 As part of the AWS Cloud Resume Challenge, one of the requirements is to use IaC (Infrastructure as Code). We can use AWS' CloudFormation service but I have opted to use Terraform. It works well and the documentation is easy to follow.
 
-In this repo, you will see a folder named "dynamodb". This consists of Terraform code used to create a DynamoDB table and add an item into it. This setup is required as I will be creating a Lambda which will be updating the DynamoDB item each time a vistor views my website.
+In this repo, you will see a folder named "dynamodb". This consists of Terraform code used to create a DynamoDB table and add an item into it. This setup is required as I will be creating a Lambda which will be updating the DynamoDB item each time a visitor views my website.
 ![tf-image](https://user-images.githubusercontent.com/24739598/226211233-45197937-d5cd-4ce1-8af4-c752b0b4ed42.png)
 
 ## 7. JavaScript
@@ -67,9 +69,9 @@ WIP - I will be creating a Lambda function in Python which will update the view 
 ## 9. CI/CD
 
 WIP - I will be creating CI/CD pipelines for the back end (Lambda function) and for the front end (website code).
-Example: When I push updates for my website, I want the S3 bucket to be updated with the new files and the CloudFront cache to be invalidated so that the updated web pages are available imediately for everyone.
+Example: When I push updates for my website, I want the S3 bucket to be updated with the new files and the CloudFront cache to be invalidated so that the updated web pages are available immediately for everyone.
 
-I am using AWS CodeCommit and CodePipeline for CI/CD. I have created a repository within AWS CodeCommit to store my website files. Depending on your IAM permissions, you may need to give yourself permissions to configure and access CodeCommit. I've already configured permissions in IAM for my user to have admin access so this wasn't neccessary. I have also generated AWS CodeCommit credentials (This is found under Security credentials in IAM).
+I am using AWS CodeCommit and CodePipeline for CI/CD. I have created a repository within AWS CodeCommit to store my website files. Depending on your IAM permissions, you may need to give yourself permissions to configure and access CodeCommit. I've already configured permissions in IAM for my user to have admin access so this wasn't necessary. I have also generated AWS CodeCommit credentials (This is found under Security credentials in IAM).
 
 Once that was done, I cloned the repo to my local machine as instructed in the AWS console. As you can see in the screenshot below, I cloned an empty repo and then proceeded to add my website files into that folder. I then added them into git, commit with a message and then pushed the changes successfully.
 
