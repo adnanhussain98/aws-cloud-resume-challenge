@@ -69,4 +69,4 @@ WIP - I will be creating a Lambda function in Python which will update the view 
 WIP - I will be creating CI/CD pipelines for the back end (Lambda function) and for the front end (website code).
 Example: When I push updates for my website, I want the S3 bucket to be updated with the new files and the CloudFront cache to be invalidated so that the updated web pages are available imediately for everyone.
 
-
+I am using AWS CodeCommit and CodePipeline for CI/CD. I have created a repository within AWS CodeCommit to store my website files. Depending on your IAM permissions, you may need to give yourself permissions to configure and access CodeCommit. I've already configured permissions in IAM for my user to have admin access so this wasn't neccessary.
