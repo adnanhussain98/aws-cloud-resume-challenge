@@ -77,3 +77,8 @@ Once that was done, I cloned the repo to my local machine as instructed in the A
 
 ![image](https://user-images.githubusercontent.com/24739598/226234080-3ee5198e-8920-40a8-9552-f20165626885.png)
 
+Update: As I'm using GitHub as my choice of version control, I've opted to connect to my GitHub repo rather than CodeCommit.
+
+Now that my website files are sitting within a GitHub repo, I can create a pipeline within AWS CodePipeline. I've connected my GitHub account and specified the repo and branch. I've skipped the build stage as it isn't requireed in this case. The final step is to add deploy stage. In this section I have specified S3 as the provider and bucket name as that's where CloudFront will be retrieving my website files from. 
+
+You can see the pipeline I've created in the screenshot below. On creation, the pipeline will be executed and the contents in my GitHub repo will be updated to the S3 bucket containing my website files.
