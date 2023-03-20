@@ -85,3 +85,6 @@ You can see the pipeline I've created in the screenshot below. On creation, the 
 
 ![image](https://user-images.githubusercontent.com/24739598/226236639-2284cda6-e135-45c3-8c6f-bbb467333bf2.png)
 
+Testing: I've added a test message to my index.html file, commit and pushed it to my GitHub repo to test the pipeline I've just created. As you can see in the screenshot, it looks to be working fine. Now I need to figure out a way to add an invalidation to CloudFront each time the pipeline is executed so that my website content is updated.
+
+![image](https://user-images.githubusercontent.com/24739598/226237858-18b8f2a1-997f-4672-bffa-dc750be5d1ed.png)
