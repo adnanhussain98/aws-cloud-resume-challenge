@@ -23,6 +23,8 @@ Update: Now that the certificates have been issued to me in AWS Certificate Mana
 
 ![Screenshot 2023-03-19 at 9 59 46 pm](https://user-images.githubusercontent.com/24739598/226212396-5b57dd81-709f-4219-bfcf-693e46dca11f.jpg)
 
+Update 2: For now, any changes made to my website will require me to create an invalidation in CloudFront so that the cached version of my website files in various edge locations are updated. Is is NOT reccomneded to replace the updated files with the same name. Instead, it's best to use versioned file names such as index-v2.html. I will be addressing this later when I set up CI/CD piplines for changes to my website files.
+
 
 ## 4. Route 53
 
@@ -53,4 +55,18 @@ As part of the AWS Cloud Resume Challenge, one of the requirements is to use IaC
 
 In this repo, you will see a folder named "dynamodb". This consists of Terraform code used to create a DynamoDB table and add an item into it. This setup is required as I will be creating a Lambda which will be updating the DynamoDB item each time a vistor views my website.
 ![tf-image](https://user-images.githubusercontent.com/24739598/226211233-45197937-d5cd-4ce1-8af4-c752b0b4ed42.png)
+
+## 7. JavaScript
+
+WIP - I will be adding in a visitor counter to my website. This will retrieve and update the view count on the website via a Lambda function.
+
+## 8. Lambda
+
+WIP - I will be creating a Lambda function in Python which will update the view count value in the DynamoDB table item I created earlier. The JavaScript function will call the Lambda function URL which will then trigger it to do the update and retrieve the latest value.
+
+## 9. CI/CD
+
+WIP - I will be creating CI/CD pipelines for the back end (Lambda function) and for the front end (website code).
+Example: When I push updates for my website, I want the S3 bucket to be updated with the new files and the CloudFront cache to be invalidated so that the updated web pages are available imediately for everyone.
+
 
